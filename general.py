@@ -10,8 +10,6 @@ def create_project_dir(directory):
         print('Creating project ' + directory)
         os.makedirs(directory)
 
-create_project_dir('testdirectory')
-
 
 # Create queue and crawled files (if not created)
 
@@ -30,3 +28,10 @@ def write_file(path, data):
     f = open(path, 'w')
     f.write(data)
     f.close()
+
+
+# Add data onto an existing file
+
+def append_to_file(path, data):
+    with open(path, 'a') as file:
+        file.write(data, '\n')
