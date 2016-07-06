@@ -35,3 +35,10 @@ def write_file(path, data):
 def append_to_file(path, data):
     with open(path, 'a') as file:
         file.write(data, '\n')
+
+
+# Delete the content of a file
+
+def delete_file_content(path):
+    with open(path, 'w'):
+        pass
