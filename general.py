@@ -12,7 +12,6 @@ def create_project_dir(directory):
 
 
 # Create queue and crawled files (if not created)
-
 def create_data_files(project_name, base_url):
     queue = project_name + '/queue.txt'
     crawled = project_name + '/crawled.txt'
@@ -23,7 +22,6 @@ def create_data_files(project_name, base_url):
 
 
 # Create a new file
-
 def write_file(path, data):
     f = open(path, 'w')
     f.write(data)
@@ -31,14 +29,21 @@ def write_file(path, data):
 
 
 # Add data onto an existing file
-
 def append_to_file(path, data):
     with open(path, 'a') as file:
         file.write(data, '\n')
 
 
 # Delete the content of a file
-
 def delete_file_content(path):
     with open(path, 'w'):
         pass
+
+
+# Read a file and convert each line to set items
+def file_to_set(file_name):
+    results = set()
+    with open(file_name, 'rt') as f:
+        for line in f:
+            results.add(line.replace('\n', ''))
+    return results
