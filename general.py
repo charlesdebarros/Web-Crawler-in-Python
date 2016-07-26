@@ -1,4 +1,4 @@
-#!/usr/bin/env python 3.3.0
+#!/usr/bin/env python3
 
 import os
 
@@ -31,7 +31,7 @@ def write_file(path, data):
 # Add data onto an existing file
 def append_to_file(path, data):
     with open(path, 'a') as file:
-        file.write(data, '\n')
+        file.write(data + '\n')
 
 
 # Delete the content of a file

@@ -1,4 +1,4 @@
-#!/usr/bin/env python 3.3.0
+#!/usr/bin/env python3
 
 from urllib.parse import urlparse
 
